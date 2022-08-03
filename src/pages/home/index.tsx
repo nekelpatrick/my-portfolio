@@ -54,15 +54,16 @@ export const Home = (): JSX.Element => {
               <Text as="span" type="heading1" color="brand1">
                 love
               </Text>{" "}
-              creating and{" "}
+              to create solutions, and{" "}
               <Text as="span" type="heading1" color="brand1">
                 developing
               </Text>{" "}
-              projects
+              new ideas
             </Text>
             <Text type="body1" color="grey2">
-              Discover here in this environment, created especially for you,
-              some of my projects and technologies.
+              Welcome to my portfolio, this environment is created especially
+              for you! Here, you see some of my projects and technologies. Check
+              contact session if you have any feedbacks. 😉
             </Text>
             <HeaderButtonsArea>
               <Button as="a" type="primary" href="#projects">
