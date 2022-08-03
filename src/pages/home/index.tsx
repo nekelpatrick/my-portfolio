@@ -46,7 +46,7 @@ export const Home = (): JSX.Element => {
                 height={"48px"}
               />
               <Text color="grey4" css={{ marginLeft: "$2" }}>
-                Hello, my name is {userData.nameUser} <HandEffect />
+                Hello World! I am {userData.nameUser} <HandEffect />
               </Text>
             </Flex>
             <Text as="h1" type="heading1" color="grey5">
@@ -58,7 +58,7 @@ export const Home = (): JSX.Element => {
               <Text as="span" type="heading1" color="brand1">
                 develop
               </Text>{" "}
-              new ideas
+              new ideas.
             </Text>
             <Text type="body1" color="grey2">
               Welcome to my portfolio, this environment is created especially
