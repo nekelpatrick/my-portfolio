@@ -30,6 +30,7 @@ import { HandEffect } from "@/components/HandEffect";
 
 export const Home = (): JSX.Element => {
   const gihubUrl = `https://github.com/${userData.githubUser}`;
+  const portfolioUrl = `https://github.com/${userData.githubUser}/my-portfolio`;
 
   return (
     <main id="home">
@@ -66,6 +67,9 @@ export const Home = (): JSX.Element => {
             <HeaderButtonsArea>
               <Button as="a" type="primary" href="#projects">
                 See Projects
+              </Button>
+              <Button as="a" target="_blank" href={portfolioUrl}>
+                See my portfolio source code
               </Button>
               <Button as="a" type="circle" target="_blank" href={gihubUrl}>
                 <FaGithub />
