@@ -34,6 +34,11 @@ export const Button = styled("button", {
           backgroundColor: "$brand2",
           borderColor: "$brand2",
         },
+        "@mobile": {
+          height: "2.5rem",
+          minHeight: "2.5rem",
+          borderRadius: "0.5rem",
+        },
       },
       icon: {
         borderColor: "$grey1",
@@ -90,6 +95,13 @@ export const Button = styled("button", {
         },
         "&:hover": {
           backgroundColor: "$grey5",
+        },
+        "@mobile": {
+          width: "5rem",
+          height: "2.7rem",
+          minWidth: "5rem",
+          minHeight: "2.7rem",
+          borderRadius: "0.5rem",
         },
       },
     },
