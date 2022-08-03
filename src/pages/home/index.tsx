@@ -29,6 +29,8 @@ import {
 import { HandEffect } from "@/components/HandEffect";
 
 export const Home = (): JSX.Element => {
+  const gihubUrl = `https://github.com/${userData.githubUser}`;
+
   return (
     <main id="home">
       <Header>
@@ -65,12 +67,7 @@ export const Home = (): JSX.Element => {
               <Button as="a" type="primary" href="#projects">
                 See Projects
               </Button>
-              <Button
-                as="a"
-                type="circle"
-                target="_blank"
-                href={userData.githubUser}
-              >
+              <Button as="a" type="circle" target="_blank" href={gihubUrl}>
                 <FaGithub />
               </Button>
             </HeaderButtonsArea>
