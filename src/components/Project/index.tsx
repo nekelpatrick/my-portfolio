@@ -24,6 +24,10 @@ interface ReposType {
 export const Project = (): JSX.Element => {
   const [repositories, setRepositories] = useState<ReposType[]>([]);
 
+  {
+    console.log(repositories);
+  }
+
   useEffect(() => {
     const fetchData = async () => {
       const data = await fetch(
@@ -69,7 +73,7 @@ export const Project = (): JSX.Element => {
           </ProjectStack>
 
           <Text type="body1" color="grey2">
-            {repository.description.substring(0, 129)}
+            {repository.description?.substring(0, 129)}
           </Text>
           <ProjectLinks>
             <ProjectLink target="_blank" href={repository.git_url}>
