@@ -46,6 +46,9 @@ export const HeaderButtonsArea = styled(Flex, {
     gap: "$3",
     marginBottom: "$2",
   },
+  "@tablet": {
+    flexWrap: "wrap",
+  },
 });
 
 export const UserImage = styled("img", {
