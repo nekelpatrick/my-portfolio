@@ -30,13 +30,9 @@ export const Contacts = () => {
               <Text type="heading2" color="grey4">
                 Let's set up a conversation and{" "}
                 <Text as="span" type="heading2" color="brand1">
-                  develop our creativity
+                  develop great solutions
                 </Text>{" "}
                 together?
-              </Text>
-              <Text color="grey2" type="body1">
-                Advertise your brand organically within Dribbble’s design
-                inspiration feed.
               </Text>
             </ContactSectionText>
           </motion.div>
