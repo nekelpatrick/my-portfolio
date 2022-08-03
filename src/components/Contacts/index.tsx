@@ -30,11 +30,11 @@ export const Contacts = () => {
           <motion.div style={{ opacity: scrollYProgress }}>
             <ContactSectionText>
               <Text type="heading2" color="grey4">
-                Let's set up a conversation and{" "}
+                Let's talk and{" "}
                 <Text as="span" type="heading2" color="brand1">
-                  develop great solutions
-                </Text>{" "}
-                together?
+                  develop solutions for your company
+                </Text>
+                , together!
               </Text>
             </ContactSectionText>
           </motion.div>
