@@ -41,7 +41,11 @@ export const HeaderButtonsArea = styled(Flex, {
   [`& ${Button}`]: {
     marginRight: "$2",
   },
-  "@mobile": {},
+  "@mobile": {
+    flexWrap: "wrap",
+    gap: "$3",
+    marginBottom: "$2",
+  },
 });
 
 export const UserImage = styled("img", {
