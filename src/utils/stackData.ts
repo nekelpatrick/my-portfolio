@@ -1,33 +1,40 @@
-import imgHTML from "../public/static/img/stack/html.svg";
-import imgCSS from "../public/static/img/stack/css.svg";
-import imgJS from "../public/static/img/stack/js.svg";
-import imgNode from "../public/static/img/stack/node.svg";
-import imgReact from "../public/static/img/stack/react.svg";
 import { TbBrandNextjs } from "react-icons/tb";
 import { SiPostgresql, SiTypescript } from "react-icons/si";
 import { FaGit, FaPython } from "react-icons/fa";
+import { FaVuejs } from "react-icons/fa";
+import {
+  FaDocker,
+  FaHtml5,
+  FaCss3Alt,
+  FaJs,
+  FaNode,
+  FaReact,
+} from "react-icons/fa";
 
 export const stackData = [
   {
     title: "HTML",
-    img: imgHTML,
+    img: FaHtml5,
   },
   {
     title: "CSS",
-    img: imgCSS,
+    img: FaCss3Alt,
   },
   {
     title: "JS",
-    img: imgJS,
+    img: FaJs,
   },
   {
     title: "Node JS",
-    img: imgNode,
+    img: FaNode,
   },
   {
     title: "React",
-    img: imgReact,
+    img: FaReact,
   },
+  { title: "Vuejs", img: FaVuejs },
+  { title: "TypeScript", img: SiTypescript },
+  { title: "Docker", img: FaDocker },
   { title: "Next.js", img: TbBrandNextjs },
   { title: "PostgreSQL", img: SiPostgresql },
   { title: "Git", img: FaGit },
