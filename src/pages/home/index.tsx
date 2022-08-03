@@ -61,14 +61,14 @@ export const Home = (): JSX.Element => {
               projects
             </Text>
             <Text type="body1" color="grey2">
-              Discover here in this environment, created especially for you, all
-              my projects and technologies
+              Discover here in this environment, created especially for you,
+              some of my projects and technologies.
             </Text>
             <HeaderButtonsArea>
               <Button as="a" type="primary" href="#projects">
                 See Projects
               </Button>
-              <Button as="a" target="_blank" href={portfolioUrl}>
+              <Button as="a" type="primary" target="_blank" href={portfolioUrl}>
                 See my portfolio source code
               </Button>
               <Button as="a" type="circle" target="_blank" href={gihubUrl}>
