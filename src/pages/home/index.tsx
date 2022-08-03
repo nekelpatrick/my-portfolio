@@ -90,9 +90,9 @@ export const Home = (): JSX.Element => {
                 My projects
               </Text>
               <Text as="p" type="body1" color="grey2">
-                Projects created at{" "}
+                Some of my{" "}
                 <Text as="span" color="brand5">
-                  Kenzie Academy
+                  Public Projects
                 </Text>
               </Text>
             </ProjectsAreaSocialMediaMessage>
