@@ -19,6 +19,8 @@ import { userData } from "@/utils/userData";
 export const Contacts = () => {
   const ref = useRef(null);
 
+  const linkedInUrl = `https://www.linkedin.com/in/${userData.linkedinUser}`;
+
   const { scrollYProgress } = useViewportScroll();
 
   return (
@@ -72,14 +74,18 @@ export const Contacts = () => {
                 <Text color="grey2" type="body2">
                   Send me an email reporting feedbacks, suggestions and ideas
                 </Text>
+
                 <Text
                   as="a"
                   color="grey2"
                   type="body2"
                   target="_blank"
                   href={`mailto=${userData.emailUser}`}
+                  onClick={() =>
+                    (window.location.href = "mailto:nekelpatrick.com")
+                  }
                 >
-                  Send email now
+                  Send me an email
                 </Text>
               </ContactCardContent>
             </ContactCard>
@@ -100,9 +106,9 @@ export const Contacts = () => {
                   color="grey2"
                   type="body2"
                   target="_blank"
-                  href={userData.linkedinUser}
+                  href={linkedInUrl}
                 >
-                  Go to Telegram Now
+                  Go to LinkedIn now
                 </Text>
               </ContactCardContent>
             </ContactCard>
