@@ -56,7 +56,7 @@ export const Button = styled("button", {
         minWidth: "2.75rem",
         minHeight: "2.75rem",
         ["& + a"]: {
-            marginLeft: "$2"
+          marginLeft: "$2",
         },
         ["&.instagram"]: {
           backgroundColor: "$socialInstagram",
