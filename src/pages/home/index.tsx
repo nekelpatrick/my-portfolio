@@ -56,7 +56,7 @@ export const Home = (): JSX.Element => {
               </Text>{" "}
               to create solutions, and{" "}
               <Text as="span" type="heading1" color="brand1">
-                developing
+                develop
               </Text>{" "}
               new ideas
             </Text>
