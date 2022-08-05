@@ -32,6 +32,8 @@ export const Home = (): JSX.Element => {
   const gihubUrl = `https://github.com/${userData.githubUser}`;
   const portfolioUrl = `https://github.com/${userData.githubUser}/my-portfolio`;
 
+  console.log(`Don't Worry, my console is clean 😉`)
+
   return (
     <main id="home">
       <Header>
