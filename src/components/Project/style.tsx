@@ -54,7 +54,8 @@ export const Project = styled("article", {
         backgroundColor: "$brand2",
         padding: "0 8px",
         borderRadius: "$1",
-        fontSize: "$text2"
+        fontSize: "$text2",
+        color: "$whiteFixed"
       }
       
     }

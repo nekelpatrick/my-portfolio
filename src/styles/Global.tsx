@@ -1,5 +1,8 @@
 import { createTheme, globalCss, styled } from "@stitches/react";
+import { useThemeProvider } from "../providers/DarkMode";
 import { ReactNode } from "react";
+
+
 
 interface GlobalStyleProps {
   children: ReactNode;
@@ -64,6 +67,8 @@ export const colors = {
     grey6: {
       color: "$grey6",
     },
+    
+
   },
 };
 
@@ -80,9 +85,13 @@ export const globalStyles = globalCss({
   a: { textDecoration: "none" },
 });
 
-export const GlobalStyle: React.FC<GlobalStyleProps> = ({ children }) => {
+export const GlobalStyle = ({children}: GlobalStyleProps ): JSX.Element =>  {
+  const { darkMode } = useThemeProvider()
+  
   const theme = createTheme({
     colors: {
+
+      
       brand1: "#623CEA",
       brand2: "#311E75",
       brand3: "#50CF9A",
@@ -92,12 +101,12 @@ export const GlobalStyle: React.FC<GlobalStyleProps> = ({ children }) => {
       brand7: "#506CCF",
       brand8: "#E5E9F8",
 
-      grey0: "#0A0A0B",
-      grey1: "#121214",
-      grey2: "#868E96",
-      grey3: "#E9ECEF",
-      grey4: "#F8F9FA",
-      grey5: "#F8F9FA",
+      grey0: darkMode ? "#0A0A0B" : "#f8f9fa",
+      grey1: darkMode ? "#121214" : "#f1f3f5",
+      grey2: darkMode ? "#868E96" : "#495057",
+      grey3: darkMode ? "#E9ECEF" : "#343a40",
+      grey4: darkMode ? "#F8F9FA" : "#212529",
+      grey5: darkMode ? "#F8F9FA" : "#0A0A0B",
 
       socialInstagram: "#CF50AC",
       socialFacebook: "#506CCF",

@@ -20,6 +20,8 @@ export const Button = styled("button", {
   whiteSpace: "nowrap",
 
   variants: {
+
+
     type: {
       btLink: {
         background: "transparent",
@@ -40,6 +42,54 @@ export const Button = styled("button", {
           borderRadius: "0.5rem",
         },
       },
+      outline: {
+        borderColor: '$grey4',
+        color: '$grey4',
+        backgroundColor: "transparent",
+
+        '&:hover':{
+          backgroundColor: '$grey0'
+        }
+      },
+      toggleTheme:{
+        height: "2.5rem",
+        minWidth: "3rem",
+        maxWidth: '3rem',
+        padding: "",
+        
+        borderRadius: '2rem',
+        borderColor: '$grey4',
+        color: '$grey4',
+        backgroundColor: "transparent",
+
+        position:'relative',
+
+        '&::before': {
+          content: '',
+          width: '1.5rem',
+          height: '1.5rem',
+          backgroundColor: '$grey4',
+          position: 'absolute',
+          left: '0.25rem',
+          borderRadius:'50%'
+        },
+        '&::after': {
+          display: 'flex',
+          alignItems:'center',
+          justifyContent:'flex-end',
+
+          content: '🌙',
+          height: '100%',
+          width: '100%',
+          backgroundColor: '',
+          right: '0.25rem',
+          position: 'absolute',
+          borderRadius:'50%'
+        }
+      },
+
+
+
       icon: {
         borderColor: "$grey1",
         backgroundColor: "$grey1",
@@ -53,7 +103,7 @@ export const Button = styled("button", {
       },
       circle: {
         borderColor: "$grey5",
-        backgroundColor: "$whiteFixed",
+        backgroundColor: "transparent",
         borderRadius: "50%",
         padding: "0",
         width: "2.75rem",
@@ -104,6 +154,22 @@ export const Button = styled("button", {
           borderRadius: "0.5rem",
         },
       },
+    },
+    darkMode:{
+      true:{
+        '&::before': {
+          left: 'auto',
+          right: '0.25rem',
+
+        },
+        '&::after': {
+          justifyContent:'flex-start',
+          content: '☀️',
+          left: '0.25rem',
+          right: 'auto',
+        }
+
+      }
     },
     ...colors,
   },
