@@ -1,6 +1,7 @@
 import { useState } from "react";
 import useMedia from "use-media";
 import { userData } from "@/utils/userData";
+import { useThemeProvider } from "@/providers/DarkMode"
 
 import {
   Navbar as NavbarWrapper,
@@ -21,6 +22,7 @@ export interface MenuButtonOpen {
 }
 
 export const NavBar = (): JSX.Element => {
+  
   const isWide = useMedia({ maxWidth: "991px" });
 
   document.title = userData.nameUser;
@@ -55,6 +57,14 @@ export const NavBar = (): JSX.Element => {
 };
 
 export const NavLinks = (): JSX.Element => {
+  const { darkMode, setDarkMode } = useThemeProvider()
+
+
+  const toggleTheme = () => {
+    setDarkMode(!darkMode)
+  }
+
+
   return (
     <NavbarLinks>
       <Button
@@ -70,8 +80,7 @@ export const NavLinks = (): JSX.Element => {
         as="a"
         color="grey4"
         href={`#projects`}
-      >
-        Projects
+      >Projects
       </Button>
       <Button
         type="btLink"
@@ -88,7 +97,10 @@ export const NavLinks = (): JSX.Element => {
         href={`#social-media`}
       >
         Social Media
-      </Button>
+      </Button  >
+
+      <Button  onClick={ toggleTheme } type="toggleTheme" aria-label="switch theme" darkMode={darkMode} />
+    
  
     </NavbarLinks>
   );

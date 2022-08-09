@@ -40,7 +40,7 @@ export const NavbarLinks = styled(Flex, {
     marginTop: "$3",
     flexDirection: "column",
     alignItems: "flex-start",
-    [`& ${Button}`]: {
+    '& a': {
       width: "100%",
       justifyContent: "flex-start",
       paddingLeft: 0

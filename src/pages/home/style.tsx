@@ -38,18 +38,40 @@ export const HeaderContent = styled("div", {
 
 export const HeaderButtonsArea = styled(Flex, {
   marginTop: "$2",
+  maxWidth: '100%',
+
   [`& ${Button}`]: {
     marginRight: "$2",
+    width: '100%',
+    overflow: 'hidden'
   },
-  "@mobile": {
-    flexWrap: "wrap",
-    gap: "$3",
-    marginBottom: "$2",
-  },
+
+  
+
+
   "@tablet": {
-    flexWrap: "wrap",
+    display: "grid",
+    gridGap: "$2",
+    marginBottom: "$2",
+    gridTemplateAreas: "'button1 button1' 'button2 button3'",
+    '& a:nth-child(1)':{
+      gridArea:'button1'
+    } ,
+    '& a:nth-child(2)':{
+      gridArea:'button2'
+    } ,
+    '& a:nth-child(3)':{
+      gridArea:'button3'
+    } ,
   },
-});
+  
+  "@mobile": {
+    display: "flex",
+    flexDirection: 'column',
+    gridGap: "$2",
+    marginBottom: "$2",
+    } ,
+})
 
 export const UserImage = styled("img", {
   borderRadius: "50%",
