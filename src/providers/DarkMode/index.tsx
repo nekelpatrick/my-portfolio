@@ -6,9 +6,7 @@ import {
   useEffect,
   useLayoutEffect,
 } from "react";
-
 const ThemeContext = createContext<any | unknown>(undefined);
-
 type Props = {
   children: ReactNode;
 };
@@ -25,14 +23,12 @@ export default function ThemeProvider({ children }: Props): JSX.Element {
   useEffect(() => {
     window.localStorage.setItem("dark-mode", JSON.stringify(darkMode));
   }, [darkMode]);
-
   return (
     <ThemeContext.Provider value={{ darkMode, setDarkMode }}>
       {children}
     </ThemeContext.Provider>
   );
 }
-
 export function useThemeProvider() {
   const context = useContext(ThemeContext);
   return context;
