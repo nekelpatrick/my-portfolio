@@ -38,18 +38,20 @@ export const HeaderContent = styled("div", {
 
 export const HeaderButtonsArea = styled(Flex, {
   marginTop: "$2",
-  maxWidth: '100%',
+ 
 
   [`& ${Button}`]: {
     marginRight: "$2",
-    width: '100%',
-    overflow: 'hidden'
+    overflow: 'hidden',
   },
 
-  
 
 
   "@tablet": {
+
+
+
+    maxWidth: '100%',
     display: "grid",
     gridGap: "$2",
     marginBottom: "$2",
@@ -66,6 +68,13 @@ export const HeaderButtonsArea = styled(Flex, {
   },
   
   "@mobile": {
+    [`& ${Button}`]: {
+      marginRight: "$2",
+      overflow: 'hidden',
+      width: '100%',
+    },
+
+    maxWidth: '100%',
     display: "flex",
     flexDirection: 'column',
     gridGap: "$2",
