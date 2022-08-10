@@ -48,7 +48,7 @@ export const Button = styled("button", {
         backgroundColor: "transparent",
 
         '&:hover':{
-          backgroundColor: '$grey0'
+          backgroundColor: '$grey2'
         }
       },
       toggleTheme:{
