@@ -10,19 +10,19 @@ export const scaleUp = keyframes({
 export const HandEffect = () => {
   const hand: any = useRef(null);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      if (entries[0].isIntersecting) {
-        setTimeout(() => {
-          hand.current.style.animation = `${scaleUp} 1s ease`;
-        }, 500);
-      }
-    });
+  // useEffect(() => {
+  //   const observer = new IntersectionObserver((entries) => {
+  //     if (entries[0].isIntersecting) {
+  //       setTimeout(() => {
+  //         hand.current.style.animation = `${scaleUp} 1s ease`;
+  //       }, 500);
+  //     }
+  //   });
 
-    observer.observe(hand.current);
+  //   observer.observe(hand.current);
 
-    return () => observer.disconnect();
-  }, []);
+  //   return () => observer.disconnect();
+  // }, []);
 
   return (
     <span
