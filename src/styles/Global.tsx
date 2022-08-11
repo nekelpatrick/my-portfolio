@@ -2,8 +2,6 @@ import { createTheme, globalCss, styled } from "@stitches/react";
 import { useThemeProvider } from "../providers/DarkMode";
 import { ReactNode } from "react";
 
-
-
 interface GlobalStyleProps {
   children: ReactNode;
 }

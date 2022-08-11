@@ -14,10 +14,11 @@ export const Navbar = styled("nav", {
 
   [`& ${Container}`]: {
     display: "flex",
+    position: "relative",
     justifyContent: "space-between",
     "@mobile": {
         flexDirection: "column"
-    },
+    }
   },
 });
 
