@@ -12,6 +12,7 @@ type Props = {
 };
 export default function ThemeProvider({ children }: Props): JSX.Element {
 
+
   const [darkMode, setDarkMode] = useState<boolean>();
 
   useEffect(() => {
@@ -19,6 +20,7 @@ export default function ThemeProvider({ children }: Props): JSX.Element {
       setDarkMode(true);
     }
   }, []);
+
 
 
   useEffect(() => {
