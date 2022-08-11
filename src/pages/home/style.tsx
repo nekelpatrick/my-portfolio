@@ -23,6 +23,9 @@ export const Header = styled("header", {
     padding: "9rem 0 6rem 0",
     backgroundImage: `none`,
   },
+  "@mobileLittle": {
+    padding: "9rem 0 0 0",
+  }
 });
 
 export const HeaderContent = styled("div", {
@@ -93,6 +96,8 @@ export const StackCards = styled("div", {
   "@mobileLittle": {
     display: 'flex',
     overflow: 'auto',
+    margin: "0 -1rem",
+    paddingInline: "1rem"
   }
 });
 

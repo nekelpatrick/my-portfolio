@@ -87,9 +87,7 @@ export const GlobalStyle = ({children}: GlobalStyleProps ): JSX.Element =>  {
   const { darkMode } = useThemeProvider()
   
   const theme = createTheme({
-    colors: {
-
-      
+    colors: { 
       brand1: "#623CEA",
       brand2: "#311E75",
       brand3: "#50CF9A",
