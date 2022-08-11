@@ -10,8 +10,8 @@ const ThemeContext = createContext<any | unknown>(undefined);
 type Props = {
   children: ReactNode;
 };
-
 export default function ThemeProvider({ children }: Props): JSX.Element {
+
   const [darkMode, setDarkMode] = useState<boolean>();
 
   useEffect(() => {
@@ -19,6 +19,7 @@ export default function ThemeProvider({ children }: Props): JSX.Element {
       setDarkMode(true);
     }
   }, []);
+
 
   useEffect(() => {
     window.localStorage.setItem("dark-mode", JSON.stringify(darkMode));
