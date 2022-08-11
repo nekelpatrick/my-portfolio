@@ -4,20 +4,21 @@ import {
   useContext,
   useState,
   useEffect,
+  useLayoutEffect,
 } from "react";
 const ThemeContext = createContext<any | unknown>(undefined);
 type Props = {
   children: ReactNode;
 };
 export default function ThemeProvider({ children }: Props): JSX.Element {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState<boolean>();
+
   useEffect(() => {
-    let savemodeValue = JSON.parse(String(window.localStorage.getItem("dark-mode")))
-    if (window.localStorage.getItem("dark-mode") !== null) {
-      setDarkMode(savemodeValue);
+    if (window.localStorage.getItem("dark-mode") === "true") {
+      setDarkMode(true);
     }
   }, []);
-  
+
   useEffect(() => {
     window.localStorage.setItem("dark-mode", JSON.stringify(darkMode));
   }, [darkMode]);

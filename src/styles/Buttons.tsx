@@ -20,8 +20,6 @@ export const Button = styled("button", {
   whiteSpace: "nowrap",
 
   variants: {
-
-
     type: {
       btLink: {
         background: "transparent",
@@ -43,52 +41,54 @@ export const Button = styled("button", {
         },
       },
       outline: {
-        borderColor: '$grey4',
-        color: '$grey4',
+        borderColor: "$grey4",
+        color: "$grey4",
         backgroundColor: "transparent",
 
-        '&:hover':{
-          backgroundColor: '$grey2'
-        }
-      },
-      toggleTheme:{
-        height: "2.5rem",
-        minWidth: "3rem",
-        maxWidth: '3rem',
-        padding: "",
-        
-        borderRadius: '2rem',
-        borderColor: '$grey4',
-        color: '$grey4',
-        backgroundColor: "transparent",
-
-        position:'relative',
-
-        '&::before': {
-          content: '',
-          width: '1.5rem',
-          height: '1.5rem',
-          backgroundColor: '$grey4',
-          position: 'absolute',
-          left: '0.25rem',
-          borderRadius:'50%'
+        "&:hover": {
+          backgroundColor: "$grey4",
+          color: "$grey1",
         },
-        '&::after': {
-          display: 'flex',
-          alignItems:'center',
-          justifyContent:'flex-end',
-
-          content: '🌙',
-          height: '100%',
-          width: '100%',
-          backgroundColor: '',
-          right: '0.25rem',
-          position: 'absolute',
-          borderRadius:'50%'
-        }
       },
+      toggleTheme: {
+        height: "2.2rem",
+        minWidth: "3rem",
+        maxWidth: "3rem",
+        padding: "",
+        borderRadius: "2rem",
+        borderColor: "$grey4",
+        color: "$grey4",
+        backgroundColor: "transparent",
+        position: "relative",
+        "&::before": {
+          content: "",
+          width: "1.5rem",
+          height: "1.5rem",
+          backgroundColor: "$grey4",
+          position: "absolute",
+          left: "0.25rem",
+          borderRadius: "50%",
+        },
+        "&::after": {
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "flex-end",
 
+          content: "🌙",
+          height: "100%",
+          width: "100%",
+          backgroundColor: "",
+          right: "0.25rem",
+          position: "absolute",
+          borderRadius: "50%",
+        },
 
+        "@mobile": {
+          position: "absolute",
+          right: "5rem",
+          top: "0.375rem",
+        },
+      },
 
       icon: {
         borderColor: "$grey1",
@@ -155,21 +155,19 @@ export const Button = styled("button", {
         },
       },
     },
-    darkMode:{
-      true:{
-        '&::before': {
-          left: 'auto',
-          right: '0.25rem',
-
+    darkMode: {
+      true: {
+        "&::before": {
+          left: "auto",
+          right: "0.25rem",
         },
-        '&::after': {
-          justifyContent:'flex-start',
-          content: '☀️',
-          left: '0.25rem',
-          right: 'auto',
-        }
-
-      }
+        "&::after": {
+          justifyContent: "flex-start",
+          content: "☀️",
+          left: "0.5rem",
+          right: "auto",
+        },
+      },
     },
     ...colors,
   },

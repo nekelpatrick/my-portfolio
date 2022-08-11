@@ -32,7 +32,7 @@ export const Home = (): JSX.Element => {
   const gihubUrl = `https://github.com/${userData.githubUser}`;
   const portfolioUrl = `https://github.com/${userData.githubUser}/my-portfolio`;
 
-  console.log(`Don't Worry, my console is clean 😉`)
+  console.log(`Don't Worry, my console is clean 😉`);
 
   return (
     <main id="home">
@@ -47,9 +47,7 @@ export const Home = (): JSX.Element => {
                 width={"48px"}
                 height={"48px"}
               />
-              <Text color="grey4" css={{ marginLeft: "$2" }}>
-                Hello World! I am {userData.nameUser} 
-              </Text>
+              <Text color="grey4">Hello World! I am {userData.nameUser}</Text>
             </Flex>
             <Text as="h1" type="heading1" color="grey5">
               I{" "}
@@ -74,7 +72,14 @@ export const Home = (): JSX.Element => {
               <Button as="a" type="outline" target="_blank" href={portfolioUrl}>
                 See my portfolio source code
               </Button>
-              <Button color="grey5" as="a" css={{'&:hover': { color: "$grey1" }}} type="circle" target="_blank" href={gihubUrl}>
+              <Button
+                color="grey5"
+                as="a"
+                css={{ "&:hover": { color: "$grey1" } }}
+                type="circle"
+                target="_blank"
+                href={gihubUrl}
+              >
                 <FaGithub />
               </Button>
             </HeaderButtonsArea>

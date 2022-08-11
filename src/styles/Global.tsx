@@ -2,8 +2,6 @@ import { createTheme, globalCss, styled } from "@stitches/react";
 import { useThemeProvider } from "../providers/DarkMode";
 import { ReactNode } from "react";
 
-
-
 interface GlobalStyleProps {
   children: ReactNode;
 }
@@ -67,8 +65,6 @@ export const colors = {
     grey6: {
       color: "$grey6",
     },
-    
-
   },
 };
 
@@ -85,13 +81,11 @@ export const globalStyles = globalCss({
   a: { textDecoration: "none" },
 });
 
-export const GlobalStyle = ({children}: GlobalStyleProps ): JSX.Element =>  {
-  const { darkMode } = useThemeProvider()
-  
+export const GlobalStyle = ({ children }: GlobalStyleProps): JSX.Element => {
+  const { darkMode } = useThemeProvider();
+
   const theme = createTheme({
     colors: {
-
-      
       brand1: "#623CEA",
       brand2: "#311E75",
       brand3: "#50CF9A",
@@ -126,7 +120,7 @@ export const GlobalStyle = ({children}: GlobalStyleProps ): JSX.Element =>  {
       4: "3rem",
       5: "4rem",
       section: "10rem",
-      sectionMobile: "4rem"
+      sectionMobile: "4rem",
     },
     fonts: {
       titles: '"IBM Plex Sans", sans-serif;',

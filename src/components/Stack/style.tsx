@@ -27,7 +27,7 @@ export const StackCard = styled("div", {
     fontSize: "1rem",
     fontWeight: "500",
     whiteSpace: "nowrap",
-    color: "$grey4",
+    color: "$blackFixed",
 
     "&:before": {
       content: "",
