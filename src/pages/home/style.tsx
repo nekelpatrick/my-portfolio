@@ -23,9 +23,6 @@ export const Header = styled("header", {
     padding: "9rem 0 6rem 0",
     backgroundImage: `none`,
   },
-  "@mobileLittle": {
-    padding: "9rem 0 0 0",
-  }
 });
 
 export const HeaderContent = styled("div", {
@@ -35,19 +32,39 @@ export const HeaderContent = styled("div", {
   flexDirection: "column",
   gap: "$2",
   "@tablet": {
-    width: "36rem",
-  },
-  "@mobile": {
-    width: "100%",
+    width: "30rem",
   },
 });
 
 export const HeaderButtonsArea = styled(Flex, {
   marginTop: "$2",
  
+
   [`& ${Button}`]: {
     marginRight: "$2",
     overflow: 'hidden',
+  },
+
+
+
+  "@tablet": {
+
+
+
+    maxWidth: '100%',
+    display: "grid",
+    gridGap: "$2",
+    marginBottom: "$2",
+    gridTemplateAreas: "'button1 button1' 'button2 button3'",
+    '& a:nth-child(1)':{
+      gridArea:'button1'
+    } ,
+    '& a:nth-child(2)':{
+      gridArea:'button2'
+    } ,
+    '& a:nth-child(3)':{
+      gridArea:'button3'
+    } ,
   },
   
   "@mobile": {
@@ -92,13 +109,6 @@ export const StackCards = styled("div", {
   "@mobile": {
     gridTemplateColumns: "1fr 1fr",
   },
-
-  "@mobileLittle": {
-    display: 'flex',
-    overflow: 'auto',
-    margin: "0 -1rem",
-    paddingInline: "1rem"
-  }
 });
 
 export const ProjectsArea = styled("section", {
@@ -107,7 +117,7 @@ export const ProjectsArea = styled("section", {
   backgroundImage: `url(${dots})`,
   backgroundRepeat: "no-repeat",
   backgroundPosition: "left top 11rem",
-  "@tablet": {
+  "@mobile": {
     backgroundPosition: "right top 8rem",
     padding: "$sectionMobile 0",
   },
@@ -133,7 +143,6 @@ export const ProjectsAreaContent = styled("div", {
   gridGap: "4rem",
   "@mobile": {
     gridTemplateColumns: "1fr",
-    overflow: "hidden",
   },
 });
 

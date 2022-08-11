@@ -8,10 +8,7 @@ export const Footer = styled("footer", {
     backgroundImage: `url(${dots})`,
     backgroundRepeat: "no-repeat",
     backgroundPosition: "left top 8rem",
-    "& a": {
-        margin: "0 !important"
-    },
-    "@tablet": {
+    "@mobile": {
         backgroundPosition: "center top 1rem",
     },
     [`& ${Container}`]:{
