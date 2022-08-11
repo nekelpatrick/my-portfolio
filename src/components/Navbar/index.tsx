@@ -14,7 +14,7 @@ import {
 import { FaGithub, FaLinkedinIn, FaBars } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
 import { Button } from "@/styles/Buttons";
-import { Container } from "@/styles/Global";
+import { Container, Flex } from "@/styles/Global";
 
 export interface MenuButtonOpen {
   open: Boolean;
@@ -23,6 +23,8 @@ export interface MenuButtonOpen {
 
 export const NavBar = (): JSX.Element => {
   
+  const { darkMode, setDarkMode } = useThemeProvider()
+
   const isWide = useMedia({ maxWidth: "991px" });
 
   document.title = userData.nameUser;
@@ -50,20 +52,16 @@ export const NavBar = (): JSX.Element => {
             </Button>
           )}
         </NavbarMobileArea>
-        {isWide ? open && <NavLinks /> : <NavLinks />}
+     <Flex>
+     {isWide ? open && <NavLinks /> : <NavLinks />}
+        <Button onClick={()=> setDarkMode(!darkMode)} type="toggleTheme" aria-label="switch theme" darkMode={darkMode} />
+     </Flex>
       </Container>
     </NavbarWrapper>
   );
 };
 
 export const NavLinks = (): JSX.Element => {
-  const { darkMode, setDarkMode } = useThemeProvider()
-
-
-  const toggleTheme = () => {
-    setDarkMode(!darkMode)
-  }
-
 
   return (
     <NavbarLinks>
@@ -97,11 +95,7 @@ export const NavLinks = (): JSX.Element => {
         href={`#social-media`}
       >
         Social Media
-      </Button  >
-
-      <Button  onClick={ toggleTheme } type="toggleTheme" aria-label="switch theme" darkMode={darkMode} />
-    
- 
+      </Button>
     </NavbarLinks>
   );
 };

@@ -6,7 +6,6 @@ import { NavBar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
 import ThemeProvider from "@/providers/DarkMode";
 
-
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <ThemeProvider>
