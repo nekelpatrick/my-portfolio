@@ -2,6 +2,8 @@ import { createTheme, globalCss, styled } from "@stitches/react";
 import { useThemeProvider } from "../providers/DarkMode";
 import { ReactNode } from "react";
 
+
+
 interface GlobalStyleProps {
   children: ReactNode;
 }
@@ -87,7 +89,9 @@ export const GlobalStyle = ({children}: GlobalStyleProps ): JSX.Element =>  {
   const { darkMode } = useThemeProvider()
   
   const theme = createTheme({
-    colors: { 
+    colors: {
+
+      
       brand1: "#623CEA",
       brand2: "#311E75",
       brand3: "#50CF9A",

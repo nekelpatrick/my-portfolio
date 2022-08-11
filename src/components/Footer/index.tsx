@@ -29,11 +29,7 @@ export const Footer = (): JSX.Element => {
             </Text>
           </Box>
         </Flex>
-        <Flex css={{
-            flexWrap: 'wrap',
-            justifyContent: 'center',
-            gap: "$2"
-        }}>
+        <Flex>
           <Button className="instagram" type="circle" as="a" target="_blank" href={`https://instagram.com/${userData.instagramUser}`}>
             <FaInstagram />
           </Button>

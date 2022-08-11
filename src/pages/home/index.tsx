@@ -47,7 +47,7 @@ export const Home = (): JSX.Element => {
                 width={"48px"}
                 height={"48px"}
               />
-              <Text color="grey4">
+              <Text color="grey4" css={{ marginLeft: "$2" }}>
                 Hello World! I am {userData.nameUser} 
               </Text>
             </Flex>
