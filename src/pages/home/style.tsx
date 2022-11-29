@@ -15,13 +15,13 @@ export const Header = styled("header", {
   
   backgroundImage: `url(${meIlustration})`,
   backgroundRepeat: "no-repeat",
-  backgroundPosition: "right center",
+  backgroundPosition: "right -10% center",
   backgroundAttachment: "fixed",
 
 
   borderBottom: "2px solid $grey5",
   "@tablet": {
-    backgroundPosition: "center",
+    backgroundPosition: "right -10% center",
   },
   "@mobile": {
     padding: "9rem 0 6rem 0",
