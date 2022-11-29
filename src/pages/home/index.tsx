@@ -28,11 +28,16 @@ import {
 } from "./style";
 // import { HandEffect } from "@/components/HandEffect";
 
+
+import meIlustrationImg from "@/public/static/img/background/me-2.png";
+
+
 export const Home = (): JSX.Element => {
   const gihubUrl = `https://github.com/${userData.githubUser}`;
   const portfolioUrl = `https://github.com/${userData.githubUser}/my-portfolio`;
   const resumeUrl = `https://docs.google.com/document/d/1f0G8TTHYsKWIebA-OofLHD0p1CKqJmKc/edit?usp=sharing&ouid=107700004794721604138&rtpof=true&sd=true`
 
+  
   console.log(`Don't Worry, my console is clean 😉`);
 
   return (
@@ -94,6 +99,7 @@ export const Home = (): JSX.Element => {
                 <Stack key={index} title={stack.title} icon={stack.img} />
               ))}
             </StackCards>
+
             
           </HeaderContent>
         </Container>
