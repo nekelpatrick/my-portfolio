@@ -7,7 +7,7 @@ export const Button = styled("button", {
   background: "$whiteFixed",
   color: "$grey1",
   fontWeight: "600",
-  padding: "0 1.5rem",
+  padding: "0 2rem",
   border: "2px solid $whiteFixed",
   borderRadius: "$1",
   cursor: "pointer",
