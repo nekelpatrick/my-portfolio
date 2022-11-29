@@ -12,7 +12,7 @@ import { Contacts } from "@/components/Contacts";
 import { stackData } from "@/utils/stackData";
 import { userData } from "@/utils/userData";
 
-import { FaGithub } from "react-icons/fa";
+import { FaGithub,FaDownload } from "react-icons/fa";
 
 // Page Style
 import {
@@ -31,6 +31,7 @@ import {
 export const Home = (): JSX.Element => {
   const gihubUrl = `https://github.com/${userData.githubUser}`;
   const portfolioUrl = `https://github.com/${userData.githubUser}/my-portfolio`;
+  const resumeUrl = `https://docs.google.com/document/d/1f0G8TTHYsKWIebA-OofLHD0p1CKqJmKc/edit?usp=sharing&ouid=107700004794721604138&rtpof=true&sd=true`
 
   console.log(`Don't Worry, my console is clean 😉`);
 
@@ -47,7 +48,7 @@ export const Home = (): JSX.Element => {
                 width={"48px"}
                 height={"48px"}
               />
-              <Text color="grey4">Hello World! I am {userData.nameUser}</Text>
+              <Text color="grey4">Hello World! I am {userData.nameUser}. 👋🏻</Text>
             </Flex>
             <Text as="h1" type="heading1" color="grey5">
               I{" "}
@@ -70,7 +71,12 @@ export const Home = (): JSX.Element => {
                 See Projects
               </Button>
               <Button as="a" type="outline" target="_blank" href={portfolioUrl}>
-                See my portfolio source code
+                See my portfolio source code 
+              </Button>
+    
+              <Button as="a" type="primary" target="_blank" href={resumeUrl} >
+                Download Resume 
+                
               </Button>
               <Button
                 color="grey5"
@@ -88,6 +94,7 @@ export const Home = (): JSX.Element => {
                 <Stack key={index} title={stack.title} icon={stack.img} />
               ))}
             </StackCards>
+            
           </HeaderContent>
         </Container>
       </Header>
