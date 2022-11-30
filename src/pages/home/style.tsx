@@ -15,8 +15,9 @@ export const Header = styled("header", {
   
   backgroundImage: `url(${meIlustration})`,
   backgroundRepeat: "no-repeat",
-  backgroundPosition: "right -10% center",
+  backgroundPosition: "right center",
   backgroundAttachment: "fixed",
+  backgroundSize: '40%',
 
 
   borderBottom: "2px solid $grey5",
