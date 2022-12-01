@@ -12,17 +12,15 @@ export const Header = styled("header", {
   backgroundColor: "$grey0",
   padding: "12rem 0 8rem 0",
 
-  
   backgroundImage: `url(${meIlustration})`,
   backgroundRepeat: "no-repeat",
-  backgroundPosition: "right center",
+  backgroundPosition: "right 4em",
   backgroundAttachment: "fixed",
-  backgroundSize: '40%',
-
+  backgroundSize: "40%",
 
   borderBottom: "2px solid $grey5",
   "@tablet": {
-    backgroundPosition: "right -10% center",
+    backgroundPosition: "45em 8em",
   },
   "@mobile": {
     padding: "9rem 0 6rem 0",
