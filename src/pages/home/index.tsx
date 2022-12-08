@@ -12,7 +12,7 @@ import { Contacts } from "@/components/Contacts";
 import { stackData } from "@/utils/stackData";
 import { userData } from "@/utils/userData";
 
-import { FaGithub, FaDownload } from "react-icons/fa";
+import { FaGithub, FaDownload, FaLinkedin } from "react-icons/fa";
 
 // Page Style
 import {

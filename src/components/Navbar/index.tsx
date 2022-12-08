@@ -11,7 +11,7 @@ import {
   NavbarMobileArea,
 } from "./style";
 
-import { FaGithub, FaLinkedinIn, FaBars } from "react-icons/fa";
+import { FaLinkedin, FaBars } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
 import { Button } from "@/styles/Buttons";
 import { Container, Flex } from "@/styles/Global";
@@ -22,6 +22,8 @@ export interface MenuButtonOpen {
 }
 
 export const NavBar = (): JSX.Element => {
+  const linkedInUrl = `https://www.linkedin.com/in/nekelpatrick/`;
+
   const { darkMode, setDarkMode } = useThemeProvider();
 
   const isWide = useMedia({ maxWidth: "991px" });
@@ -39,7 +41,11 @@ export const NavBar = (): JSX.Element => {
       <Container>
         <NavbarMobileArea>
           <LogoTipo>
-            <LogoTipoText>{userData.nameUser}</LogoTipoText>
+            <LogoTipoText as="a" target="_blank" href={linkedInUrl}>
+              {userData.nameUser}
+
+              <FaLinkedin style={{ marginLeft: "10px" }} />
+            </LogoTipoText>
           </LogoTipo>
           {isWide && (
             <Button
