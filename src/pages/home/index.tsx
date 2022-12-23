@@ -31,7 +31,7 @@ import {
 export const Home = (): JSX.Element => {
   const gihubUrl = `https://github.com/${userData.githubUser}`;
   const portfolioUrl = `https://github.com/${userData.githubUser}/my-portfolio`;
-  const resumeUrl = `https://docs.google.com/document/d/1f0G8TTHYsKWIebA-OofLHD0p1CKqJmKc/edit?usp=sharing&ouid=107700004794721604138&rtpof=true&sd=true`;
+  const resumeUrl = `https://drive.google.com/file/d/1TIrv9ETrG2nEtMcap4p8AS5HWiimRPEH/view?usp=sharing`;
 
   console.log(`Don't Worry, my console is clean 😉`);
 
