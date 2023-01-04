@@ -36,6 +36,24 @@ export const Project = (): JSX.Element => {
     fetchData();
   }, []);
 
+  function checkUrl(url: string) {
+    if (url != null && url.startsWith("https://")) {
+      return (
+        <ProjectLink target="_blank" href={url}>
+          <FaShare /> See demo
+        </ProjectLink>
+      );
+    } else if (url != null && !url.startsWith("https://")) {
+      return (
+        <ProjectLink target="_blank" href={`https://${url}`}>
+          <FaShare /> See demo
+        </ProjectLink>
+      );
+    } else if (!url || null) {
+      return null;
+    }
+  }
+
   return (
     <>
       {repositories?.map((repository) => (
@@ -48,7 +66,6 @@ export const Project = (): JSX.Element => {
           >
             {repository.name}
           </ProjectTitle>
-
           <ProjectStack>
             <Text type="body2" color="grey2">
               Primary Language:
@@ -67,7 +84,6 @@ export const Project = (): JSX.Element => {
               </ProjectStackTech>
             )}
           </ProjectStack>
-
           <Text type="body1" color="grey2">
             {repository.description?.substring(0, 129)}
           </Text>
@@ -75,14 +91,11 @@ export const Project = (): JSX.Element => {
             <ProjectLink target="_blank" href={repository.html_url}>
               <FaGithub /> Github Code
             </ProjectLink>
-            {repository.homepage && (
-              <ProjectLink
-                target="_blank"
-                href={`https://${repository.homepage}`}
-              >
-                <FaShare /> See demo
-              </ProjectLink>
-            )}
+            {/*  */}
+
+            {checkUrl(repository.homepage)}
+
+            {/*  */}
           </ProjectLinks>
         </ProjectWrapper>
       ))}
