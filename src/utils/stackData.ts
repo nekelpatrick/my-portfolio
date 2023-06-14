@@ -8,6 +8,7 @@ import {
   FaJs,
   FaNode,
   FaReact,
+  FaAws
 } from "react-icons/fa";
 
 export const stackData = [
@@ -37,4 +38,5 @@ export const stackData = [
   { title: "PostgreSQL", img: SiPostgresql },
   { title: "Git", img: FaGit },
   { title: "Python", img: FaPython },
+  {title: "AWS", img: FaAws}
 ];
