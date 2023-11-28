@@ -10,7 +10,7 @@ import {
   FaReact,
   FaAws
 } from "react-icons/fa";
-import {TbBrandReactNative} from "react-icons/Tb"
+import { TbBrandReactNative } from "react-icons/tb";
 
 export const stackData = [
   {
